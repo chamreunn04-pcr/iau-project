@@ -25,3 +25,5 @@ Breadcrumbs::for('roles', function ($trail) {
 
 // settings 
 Breadcrumbs::for('settings', function ($trail) {});
+// manage apps
+Breadcrumbs::for('create_apps', function ($trail) {});

@@ -4,9 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ManageApplication;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SystemController;
 use App\Http\Controllers\Admin\UserPermissionController;
 
 // ADMIN LOGIN (guest only)
@@ -43,6 +45,12 @@ Route::prefix('admin')
         Route::get('/roles/{role}', [RoleController::class, 'edit'])->name('roles.edit');
         Route::put('/roles/{role}', [RoleController::class, 'update'])->name('roles.update');
         Route::delete('/roles/{role}', [RoleController::class, 'destroy'])->name('roles.destroy');
+
+        // app managed 
+        Route::get('/index', [SystemController::class, 'index'])->name('system.index');
+        Route::get('/create-apps', [SystemController::class, 'create'])->name('create_apps');
+        Route::post('/create-store', [SystemController::class, 'store'])->name('system.store');
+        Route::get('/system/{system:slug}', [SystemController::class, 'show'])->name('systems.show');
 
         // logout route
         Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');

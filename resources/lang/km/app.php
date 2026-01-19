@@ -62,6 +62,9 @@ return [
         'roles' => 'តួនាទី',
         'permissions' => 'សិទ្ធិ',
         'user_permissions' => 'សិទ្ធិអ្នកប្រើប្រាស់',
+        'apps_manage' => 'គ្រប់គ្រងប្រព័ន្ធ',
+        'create_apps' => 'បង្កើតប្រព័ន្ធ',
+        'list_apps' => 'បញ្ជីប្រព័ន្ធ'
     ],
 
     // user

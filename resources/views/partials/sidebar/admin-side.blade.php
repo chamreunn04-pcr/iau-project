@@ -872,6 +872,23 @@
                             href="{{ route('admin.permissions') }}"> {{ __('app.sidebar.permissions') }} </a>
                     </div>
                 </li>
+                <li
+                    class="nav-item dropdown {{ active_class(['admin.create_apps', 'admin.system.index', 'admin.create_apps'], 'active') }}">
+                    <a class="nav-link dropdown-toggle" href="#navbar-form" data-bs-toggle="dropdown"
+                        data-bs-auto-close="false" role="button" aria-expanded="false">
+                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                            <x-icon name="apps" class="icon icon-1" />
+                        </span>
+                        <span class="nav-link-title"> {{ __('app.sidebar.apps_manage') }} </span>
+                    </a>
+                    <div
+                        class="dropdown-menu {{ active_class(['admin.create_apps', 'admin.system.index', 'admin.create_apps'], 'show') }}">
+                        <a class="dropdown-item {{ active_class('admin.create_apps', 'active') }}"
+                            href="{{ route('admin.create_apps') }}"> {{ __('app.sidebar.create_apps') }} </a>
+                        <a class="dropdown-item {{ active_class('admin.system.index', 'active') }}"
+                            href="{{ route('admin.system.index') }}"> {{ __('app.sidebar.list_apps') }} </a>
+                    </div>
+                </li>
             </ul>
             <!-- END NAVBAR MENU -->
         </div>

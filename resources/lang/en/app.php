@@ -62,6 +62,9 @@ return [
         'roles' => 'Roles',
         'permissions' => 'Permissions',
         'user_permissions' => 'User Permissions',
+        'apps_manage' => 'Manage Apps',
+        'create_apps' => 'Create Apps',
+        'list_apps' => 'Apps List'
     ],
 
     // user
@@ -74,6 +77,8 @@ return [
     //applications
     'applications' => [
         'human_resource' => 'Human Resource',
-        'leave' => 'Leave'
-    ]
+        'leave' => 'Leave',
+    ],
+
+
 ];
